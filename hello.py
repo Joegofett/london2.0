@@ -12,4 +12,4 @@ def hello_world():
 
 @app.route('/groupme')
 def groupme():
-    Request()
+    pass
