@@ -1,3 +1,4 @@
+from hashlib import new
 import requests
 import os
 import time
@@ -10,20 +11,38 @@ def getandgrab():
     data = r.json()
     testing=    data['response']
     first_form = testing['messages']
-    checking = {}
+    new_data = {}
     key = 0
     for info in first_form:
-        checking[info['id']] = info['text']
+        new_data[info['id']] = info['text']
         key += 1   
-        
-    for info in checking:
-        text_data = str(checking[info])
-        if "nl central standings" in text_data.lower():
-            print('success')
+    used_messages = {}
+    old_messages ={}
+    keytwo = 0
+    for info in old_messages:
+        oldkey = str(old_messages[info])
+        if oldkey in old_messages[info]:
+            print('no new data')
+            for data in new_data:
+                text_data = str(new_data[data])
+                
+
+    # for info in new_data:
+    #     text_data = str(new_data[info])
+    #     if "nl central standings" in text_data.lower():
+    #         used_messages[keytwo] = info
+    #         print("nl standings")
+    #     elif  old_messages in text_data.lower():
+    #         old_messages[keytwo] = info
+    #         print('old message added') 
+    #     else:
+    #         print("No messages added")   
     time.sleep(5)
 
 
-    return checking
+
+
+    return 
 
 
 
