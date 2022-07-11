@@ -1,7 +1,7 @@
 import http
 from flask import Flask
 from discord_bot import translator
-from flask import Request
+from groupme import listener
 app =Flask(__name__)
 
 @app.route("/")
@@ -12,4 +12,11 @@ def hello_world():
 
 @app.route('/groupme')
 def groupme():
-    pass
+    testing = listener.getandgrab()
+    print(testing)
+
+
+while True:
+    groupme()
+    
+    
