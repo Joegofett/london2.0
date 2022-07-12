@@ -19,12 +19,20 @@ def getandgrab():
     used_messages = {}
     old_messages ={}
     keytwo = 0
-    for info in old_messages:
-        oldkey = str(old_messages[info])
-        if oldkey in old_messages[info]:
-            print('no new data')
-            for data in new_data:
-                text_data = str(new_data[data])
+    for info in new_data:
+        oldkey = str(new_data[info])
+
+    return oldkey
+       
+       
+       
+        # if oldkey in old_messages[info]:
+        # else:
+        #     for data in new_data:
+        #         text_data = str(new_data[data])
+        #         if "nl central standings" in text_data:
+        #             old_messages[data] = text_data
+        #             print("NL central standings")
                 
 
     # for info in new_data:
@@ -37,12 +45,7 @@ def getandgrab():
     #         print('old message added') 
     #     else:
     #         print("No messages added")   
-    time.sleep(5)
 
-
-
-
-    return 
 
 
 

@@ -13,7 +13,7 @@ def hello_world():
 @app.route('/groupme')
 def groupme():
     testing = listener.getandgrab()
-    print('working')
+    print(testing)
 
 
 while True:
